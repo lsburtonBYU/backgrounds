@@ -18,7 +18,7 @@ body {
   background-attachment: fixed;
   background-color: transparent;
   background-position: 0% 0%;
-  background-repeat: repeat-y;
+  background-repeat: repeat-x;
   background-size: auto auto; */
 }
 
@@ -34,68 +34,53 @@ h2 {
   font-weight: 200;
 }
 
-/* I created a class to set the background image. Because I want each
-   image to be different, I use a CSS variable for the url. I then define
-   each different url in separate CSS classes. */
-.bg-image {
-  /* I add two images. The first is a gradient (rendered on top of the image), the second the image.  */
-  background-image: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.4),
-      rgba(0, 0, 0, 0.2)
-    ),
-    var(--image-url);
-  background-attachment: fixed;
-  background-position: center;
-
-  /* in case your image doesn't fit the screen well, this is helpful.
-    The background-size: cover will scale down and/or crop images so they
-    fit in the viewport better */
-  background-repeat: no-repeat;
-  background-size: cover;
-
-  color: #fff;
-  padding-bottom: 3rem;
-}
-
-.bg-image > * {
-  color: #fff;
-}
-
-h1 {
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  font-size: 4rem;
-}
-
 article {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 0 1rem 2rem;
 }
 
-article > * {
+.inner-article {
   max-width: 30rem;
 }
 
-article > h2 {
-  width: 100%;
+.bg-image {
+  background: var(--bg-url);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  color: #fff;
+}
+
+.bg-image h2 {
+  color: #fff;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 4rem;
+
+  padding: 0 1rem;
   margin: 0;
-  padding-top: 3rem;
 }
 
-.bg-image-1 {
-  --image-url: url(../images/bg-green-hills.jpg);
+.full-height {
+  height: 100vh;
 }
 
-.bg-image-2 {
-  --image-url: url(../images/bg-ocean-shore.jpg);
+.bg-1 {
+  --bg-url: url(../images/bg-green-hills.jpg);
 }
 
-.bg-image-3 {
-  --image-url: url(../images/bg-red-rock.jpg);
+.bg-2 {
+  --bg-url: url(../images/bg-ocean-shore.jpg);
+}
+
+.bg-3 {
+  --bg-url: url(../images/bg-red-rock.jpg);
 }
