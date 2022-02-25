@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: #5f5f5f;
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5;
+  /* background: ; */
+
+  /* default settings for properties that can be 
+     included in background shortcut; 
+     bg-size may only be included immediately 
+     after position separated 
+     with a / such as 'center/80%' */
+  /* background-image: url(../images/cat-meme-dinner.png);
+  background-attachment: fixed;
+  background-color: transparent;
+  background-position: 0% 0%;
+  background-repeat: repeat-y;
+  background-size: auto auto; */
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+h1,
+h2,
+h2 {
+  color: #000;
+  font-weight: 200;
+}
+
+/* I created a class to set the background image. Because I want each
+   image to be different, I use a CSS variable for the url. I then define
+   each different url in separate CSS classes. */
+.bg-image {
+  /* I add two images. The first is a gradient (rendered on top of the image), the second the image.  */
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.2)
+    ),
+    var(--image-url);
+  background-attachment: fixed;
+  background-position: center;
+  color: #fff;
+  padding-bottom: 3rem;
+}
+
+.bg-image > * {
+  color: #fff;
+}
+
+h1 {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-size: 4rem;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 1rem 2rem;
+}
+
+article > * {
+  max-width: 30rem;
+}
+
+article > h2 {
+  width: 100%;
+  margin: 0;
+  padding-top: 3rem;
+}
+
+.bg-image-1 {
+  --image-url: url(../images/bg-green-hills.jpg);
+}
+
+.bg-image-2 {
+  --image-url: url(../images/bg-ocean-shore.jpg);
+}
+
+.bg-image-3 {
+  --image-url: url(../images/bg-red-rock.jpg);
+}
