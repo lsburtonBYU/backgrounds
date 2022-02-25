@@ -39,10 +39,12 @@ article {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  padding: 3rem 1rem;
 }
 
 .inner-article {
-  max-width: 30rem;
+  max-width: 50rem;
 }
 
 .bg-image {
