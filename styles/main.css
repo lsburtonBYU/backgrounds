@@ -47,6 +47,13 @@ h2 {
     var(--image-url);
   background-attachment: fixed;
   background-position: center;
+
+  /* in case your image doesn't fit the screen well, this is helpful.
+    The background-size: cover will scale down and/or crop images so they
+    fit in the viewport better */
+  background-repeat: no-repeat;
+  background-size: cover;
+
   color: #fff;
   padding-bottom: 3rem;
 }
